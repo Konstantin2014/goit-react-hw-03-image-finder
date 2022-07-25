@@ -27,7 +27,7 @@ export class App extends Component {
     largeImage: [],
   };
 
-  async componentDidUpdate(prevProps, prevState) {
+  async componentDidUpdate(_, prevState) {
     const { page, searchQuery, per_page } = this.state;
     if (prevState.page !== page || prevState.searchQuery !== searchQuery) {
       try {

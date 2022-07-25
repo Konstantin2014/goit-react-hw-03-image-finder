@@ -22,16 +22,16 @@ export class Modal extends Component {
     window.removeEventListener('keydown', this.handleKeyDown);
   }
 
-  handleKeyDown = e => {
+  handleKeyDown = event => {
     const { toggleModal } = this.props;
-    if (e.code === 'Escape') {
+    if (event.code === 'Escape') {
       toggleModal();
     }
   };
 
-  handleBackdropClick = e => {
+  handleBackdropClick = event => {
     const { toggleModal } = this.props;
-    if (e.currentTarget === e.target) {
+    if (event.currentTarget === event.target) {
       toggleModal();
     }
   };
